@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="background: rgb(237, 234, 234)">
+
+    <div class="apple">
+
+      <div class="contain mt-3 mb-5 p-4">
+
+        <!-- newly added -->
+        <!-- <div class="container">
+          <div class="row gy-5 padding-bottom: 10%">
+            <div  class="col-md-3">
+              
+              <div class="card h-100" style="max-width: 17rem;">
+                  <ng-container *ngFor="let t of trendingMovieResult">
+                <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path}}"
+                  class="card-img-top" alt="..." [routerLink]="['/movie',t.id]">
+                  </ng-container>
+      
+                <div class="card-body">
+                  <a class="w3-text-black" style="text-decoration: none" >
+                      <p class="mt-3 mb-3">{{trendingMovieResult.original_title}}></p>
+                  </a>
+                  <p class="card-text" 
+                  style="overflow: hidden;
+                          text-overflow: ellipsis;
+                          display: -webkit-box;
+                          line-height: 24px;    
+                          max-height: 100px;     
+                          -webkit-line-clamp: 3; 
+                          -webkit-box-orient: vertical;"
+                          >
+                                {{trendingMovieResult.overview}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+      
+        <!-- trending movies  -->
+        <div class="row">
+          <h5 class="text-black">Trending Movies</h5>
+          <div class="rowposter mt-3 p-2">
+            <ng-container *ngFor="let t of trendingMovieResult">
+              <img src="https://image.tmdb.org/t/p/original/{{ t.poster_path }}" class="rowimg largeposter" alt="..."
+                [routerLink]="['/movie',t.id]">
+            </ng-container>
+      
+          </div>
+      
+        </div>
+      
+        <!-- action movies  -->
+        <div class="row mt-4">
+          <h5 class="text-black">Action Movies</h5>
+          <div class="rowposter mt-3 p-2">
+            <ng-container *ngFor="let a of actionMovieResult">
+              <img src="https://image.tmdb.org/t/p/original/{{ a.poster_path }}" class="rowimg largeposter" alt="..."
+                [routerLink]="['/movie',a.id]">
+            </ng-container>
+      
+          </div>
+      
+        </div>
+      
+        <!-- adventure movies  -->
+        <div class="row mt-4">
+          <h5 class="text-black">Adventure Movies</h5>
+          <div class="rowposter mt-3 p-2">
+            <ng-container *ngFor="let a of adventureMovieResult">
+              <img src="https://image.tmdb.org/t/p/original/{{ a.poster_path }}" class="rowimg largeposter" alt="..."
+                [routerLink]="['/movie',a.id]">
+            </ng-container>
+      
+          </div>
+      
+        </div>
+      
+      
+        <!-- animation movies  -->
+        <div class="row mt-4">
+          <h5 class="text-black">Animation Movies</h5>
+          <div class="rowposter mt-3 p-2">
+            <ng-container *ngFor="let a of animationMovieResult">
+              <img src="https://image.tmdb.org/t/p/original/{{ a.poster_path }}" class="rowimg largeposter" alt="..."
+                [routerLink]="['/movie',a.id]">
+            </ng-container>
+      
+          </div>
+      
+        </div>
+      
+        <!-- comedy movies  -->
+        <div class="row mt-4">
+          <h5 class="text-black">Comedy Movies</h5>
+          <div class="rowposter mt-3 p-2">
+            <ng-container *ngFor="let c of comedyMovieResult">
+              <img src="https://image.tmdb.org/t/p/original/{{ c.poster_path }}" class="rowimg largeposter" alt="..."
+                [routerLink]="['/movie',c.id]">
+            </ng-container>
+      
+          </div>
+      
+        </div>
+      
+        <!-- documentary movies  -->
+        <div class="row mt-4">
+          <h5 class="text-black">Documentary Movies</h5>
+          <div class="rowposter mt-3 p-2">
+            <ng-container *ngFor="let d of documentaryMovieResult">
+              <img src="https://image.tmdb.org/t/p/original/{{ d.poster_path }}" class="rowimg largeposter" alt="..."
+                [routerLink]="['/movie',d.id]">
+            </ng-container>
+      
+          </div>
+      
+        </div>
+      
+        <!-- science-fiction movies  -->
+        <div class="row mt-4">
+          <h5 class="text-black">Science-Fiction Movies</h5>
+          <div class="rowposter mt-3 p-2">
+            <ng-container *ngFor="let sf of sciencefictionMovieResult">
+              <img src="https://image.tmdb.org/t/p/original/{{ sf.poster_path }}" class="rowimg largeposter" alt="..."
+                [routerLink]="['/movie',sf.id]">
+            </ng-container>
+      
+          </div>
+      
+        </div>
+      
+      
+      </div>
+    </div>
+
+</body>
+
+</html>

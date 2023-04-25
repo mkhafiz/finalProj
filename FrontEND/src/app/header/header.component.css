@@ -1,0 +1,100 @@
+
+
+.navbar .navbar-brand
+{
+    color: #ff1521;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+    color: #ff1521;
+    
+}
+
+
+
+
+
+.login, .sign-up{
+
+
+    background-color: transparent;
+    border-color: #ff1521;
+    color: #ff1521;
+    fill: #ff1521;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 15px;
+
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;  
+
+}
+
+button{
+
+    background-color: transparent;
+    border-color: #ff1521;
+    color: #ff1521;
+    fill: #ff1521;
+    border: 1px solid;
+    border-radius: 4px;
+    box-sizing: border-box;
+    text-align: center;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-size: 15px;
+
+    font-weight: 700;
+    letter-spacing: .5px;
+    line-height: 24px;
+
+    text-transform: uppercase;
+    padding: 3px 16px;
+    opacity: 1;  
+
+
+
+
+}
+
+.sign-up{
+    background-color: #ff1521;
+    border-color: #ff1521;
+    color: aliceblue;
+}
+
+.sign-up:hover{
+    opacity: 0.6;
+    background-color: #ffffff;
+    color: #ff1521;
+}
+
+.login{
+
+    background-color: rgba(0, 0, 0, 0);
+    border-color: #ff1521;
+    color: #ff1521;
+
+
+}
+
+.login:hover{
+
+    
+    background-color: #ff1521;
+    color: white;
+
+
+
+}

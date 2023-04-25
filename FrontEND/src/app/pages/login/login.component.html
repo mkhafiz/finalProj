@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Toast CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+        integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+        crossorigin="anonymous" />
+
+        <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section>
+          <div class="form-box">
+                <div class="form-value">
+                    <form [formGroup]="loginForm" (ngSubmit)="login()">
+                            <h2>Log In</h2>
+                            
+                            <div class="inputbox">
+                                
+                                 <input type="text" [formControlName]="'username'"class="form-control" required placeholder=" ">
+                                  
+                                 <div *ngIf="!loginForm.get('username')?.valid && loginForm.get('username')?.touched">
+                                           
+                                    <small class="text-danger"  style="float: right" >  Username Required (6 Characters)</small>
+                                      
+                                   </div>
+                                    
+                                    <label for="username">Username:</label>
+                            </div>
+     
+
+                            <div class="inputbox">
+                             
+                                    <input type="password" [formControlName]="'password'" id="password" class="form-control" name="password" required placeholder=" ">
+                                   
+                                    <div *ngIf="!loginForm.get('password')?.valid && loginForm.get('password')?.touched">
+                                           
+                                        <small class="text-danger"  style="float: right" >  Password Required (6 Characters)</small>
+                                          
+                                       </div>
+                                    <label for="password">Password:</label>
+                              
+                            </div>
+
+                                <button type="submit" class="login"  [disabled]="!loginForm.valid"> Login</button>
+                                <br>
+                                <button type="button" class="login-with-google-btn mx-auto"  #loginRef>
+                                    Google Sign in 
+                                  </button>
+                                <div class="register">
+                                    <p>Don't have an account ? <a routerLink="/signup">Signup</a></p>
+                                </div>
+                           
+                        </form>
+
+                        <div  *ngIf='this.isError'>
+                                <p class="text-danger">Login Failed.</p>   
+                                <p class="text-danger">Invalid username or password</p>   
+                           </div>
+                           <div   *ngIf="this.registerSuccessMessage.length > 0">
+                               <small class="register-success-text">Check your inbox for verification email.</small>
+                               <br>
+                               <small class="register-success-text">    Cannot login without verifying.</small>
+                          </div>      

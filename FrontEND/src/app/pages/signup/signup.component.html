@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Toast CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"
+        integrity="sha512-vKMx8UnXk60zUwyUnUPM3HbQo8QfmNx7+ltw8Pm5zLusl1XIfwcxo8DbWCqMGKaWeNxWA8yrx5v3SaVpMvR3CA=="
+        crossorigin="anonymous" />
+
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <section>
+        <div class="form-box">
+            <div class="form-value">
+                <form [formGroup]="signupForm" (ngSubmit)="signup()">
+                    <h2>Register</h2>
+                    <small class="text-danger">{{msg}}</small>
+
+                    <div class="inputbox">
+                        <input type="text" [formControlName]="'email'" id="email_address" name="email-address" required
+                            placeholder=" ">
+                        <div *ngIf="!signupForm.get('email')?.valid && signupForm.get('email')?.touched">
+                            <h6 class="text-danger" style="float: right"> Please enter a valid Email ID</h6>
+
+                        </div>
+                        <label for="email_address">Email:</label>
+                    </div>
+
+
+                    <div class="inputbox">
+
+                        <input type="text" [formControlName]="'username'" class="form-control" required placeholder=" ">
+
+                        <div *ngIf="!signupForm.get('username')?.valid && signupForm.get('username')?.touched">
+
+                            <small class="text-danger" style="float: right"> Username Required (6 Characters)</small>
+
+                        </div>
+
+                        <label for="username">User Name:</label>
+
+                    </div>
+
+
+                    <div class="inputbox">
+
+
+                        <input type="password" [formControlName]="'password'" id="password" class="form-control"
+                            name="password" required placeholder=" ">
+
+                        <div *ngIf="!signupForm.get('password')?.valid && signupForm.get('password')?.touched">
+
+                            <small class="text-danger" style="float: right"> Password Required (6 Characters)</small>
+
+                        </div>
+                        <label for="password">Password:</label>
+
+                    </div>
+
+
+
+
+
+                    <button type="submit" class="sign-up" [disabled]="!signupForm.valid"> Sign Up</button>
+                    <div class="register">
+                        <p>Already have an account ? <a routerLink="/login">Login</a></p>
+                    </div>
+
+                </form>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+</body>
+
+</html>

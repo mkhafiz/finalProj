@@ -1,0 +1,100 @@
+
+<section>
+<div class="contain mt-5">
+    <div class="row p-5">
+        <div class="col-lg-2" *ngIf="getMovieDetailResult.poster_path">
+                <img 
+                src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.poster_path }}" 
+                >
+        </div>
+        <div class="col-lg-10 mt-5 p-4">
+                <h1 class="mt-2 mb-2">{{getMovieDetailResult.original_title}}</h1>
+                <p class="mt-3 mb-3">{{getMovieDetailResult.overview}}</p>
+                
+
+                <!-- <div class="mt-4 p-4">
+                    <h2 class="text-white">Top Cast</h2>
+                    <div class="row">
+                    <div class="col-lg-4" *ngFor="let c of getMovieCastResult">
+                        <div class="row mt-2 mb-2">
+                            <div class="col-lg-2" *ngIf="c.profile_path">
+                                <img 
+                                src="https://image.tmdb.org/t/p/original/{{ c.profile_path}}" 
+                                >
+                            </div>
+                            <div class="col-lg-10">
+                                <h3 class="text-white">{{c.original_name}}</h3>
+                                <p class="text-white">{{c.character}}</p>
+                            </div>
+                        </div>
+
+                        </div>
+
+                    </div>
+                </div> -->
+        </div>
+    </div>
+</div>
+</section> 
+
+
+
+
+
+<!-- <div class="w3-card-2" *ngIf="getMovieDetailResult.poster_path">
+    <div class="w3-display-container w3-text">
+        <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.poster_path }}"
+            class="card-img-top" alt="backdrop_path" style="object-fit: cover; 
+            width: 100%; height: 80vh; margin: auto;
+        opacity:0.3;filter:alpha(opacity=40); background:url(image.jpg)">
+
+        <div class="w3-display-left w3-container" style="margin-left: 1%;">
+            <img src="https://image.tmdb.org/t/p/original/{{ getMovieDetailResult.poster_path }}"
+                class="w3-round" alt="..." style="max-width: 30vw; max-height: 60vh; margin: auto;">
+        </div>
+
+        <div class="w3-large w3-display-topmiddle" style="margin-top: 1.5%; margin-bottom: 1%; margin-left: 4.5%;
+        width: 60%;">
+
+                <h1 class="mt-2 mb-2">{{getMovieDetailResult.original_title}}</h1>
+                <p class="mt-3 mb-3">{{getMovieDetailResult.overview}}</p>
+                
+            <div class="text-center" style="margin-bottom: 3%; font-size: large;">
+                <h1><b >{{getMovieDetailResult.original_title}}</b></h1>
+            </div>
+            <div style="font-size: large; margin-bottom: 2%">
+                <h3><b>Overview</b></h3>
+                <p class="card-text">{{getMovieDetailResult.overview}}</p>
+            </div>
+
+            <div style="font-size: medium;">
+                <dl class="row">
+                    <dt class="col-sm-3">Ratings</dt>
+                    <dd class="col-sm-9">
+                        <p class="card-text">{{getMovieDetailResult.contentRating}}, {{getMovieDetailResult.imDbRating}}</p>
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-3">Language</dt>
+                    <dd class="col-sm-9">
+                        <p class="card-text" data-th-text="${d.name}"></p>
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-3">Budget</dt>
+                    <dd class="col-sm-9">
+                        <p class="card-text" data-th-text="'$'+${d.budget}"></p>
+                    </dd>
+                </dl>
+                <dl class="row">
+                    <dt class="col-sm-3">Revenue</dt>
+
+                    <dd class="col-sm-9">
+                        <p class="card-text" data-th-text="'$'+${d.revenue}"></p>
+                    </dd>
+                </dl>
+            </div>
+        </div>
+
+    </div>
+</div> -->
